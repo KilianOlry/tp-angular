@@ -1,0 +1,30 @@
+<nav class="main-nav">
+  <menu class="main-menu">
+    <li class="main-menu-items">
+      <a routerLink="" class="main-menu-links">
+        Accueil
+      </a>
+    </li>
+    <li class="main-menu-items">
+      <a routerLink="/RicketMorty" class="main-menu-links">
+        Rick Et Morty
+      </a>
+    </li>
+    @if(isAuthenticated()){
+      <li class="main-menu-items">
+        <a routerLink="/websnaps" class="main-menu-links">
+          Websnaps
+        </a>
+      </li>
+      <li class="main-menu-items">
+        <a (click)="logout()" class="main-menu-links">Déconnexion</a>
+      </li>
+    }@else{
+      <li class="main-menu-items">
+        <a routerLink="/auth/login" class="main-menu-links">
+          Connexion
+        </a>
+      </li>
+    }
+  </menu>
+</nav>
