@@ -1,0 +1,7 @@
+<div *ngIf="loading">Chargement...</div>
+
+<div *ngIf="!loading">
+  <h3>{{ photo.title}}</h3>
+  <img [src]="photo.url" [alt]="photo.title" style="max-width: 100%" />
+  <p>{{ photo.explanation }}</p>
+</div>

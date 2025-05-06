@@ -1,0 +1,16 @@
+<h2>Personnages de Rick and Morty</h2>
+
+<div class="section__rick_et_morty">
+  <div *ngIf="loading">Chargement...</div>
+
+  <ul *ngIf="!loading" class="list__rick_et_morty">
+    <li *ngFor="let character of posts" class="item">
+      <img [src]="character.image" alt="{{ character.name }}">
+      <div>
+        <p>{{ character.name }}</p>
+        <p>Statut : {{ character.status }}</p>
+      </div>
+    </li>
+  </ul>
+</div>
+

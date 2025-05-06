@@ -1,0 +1,20 @@
+.list__rick_et_morty{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  ul{
+    list-style-type: none;
+  }
+  li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 310px;
+    img{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+  }
+}

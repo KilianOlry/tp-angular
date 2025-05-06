@@ -25,7 +25,14 @@ export const routes: Routes = [
   {
     path:"RicketMorty",
     title: `Rick et Morty - ${appTitle}`,
-    loadComponent: () => import("@/components/data/./data.component").then(m => m.DataComponent)
+    canActivate: [AuthGuard],
+    loadComponent: () => import("@/components/http/data/data.component").then(m => m.DataComponent)
+  },
+  {
+    path:"nasa",
+    title: `Nasa - ${appTitle}`,
+    canActivate: [AuthGuard],
+    loadComponent: () => import("@/components/http/nasa/nasa.component").then(m => m.NasaComponent)
   },
   {
     path:"websnaps/websnap/:id",
