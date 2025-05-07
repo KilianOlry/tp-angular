@@ -1,0 +1,28 @@
+.nasa{
+  display: flex;
+  gap: 2rem;
+  margin-block: 5rem;
+  padding: .8rem;
+  p{
+    font-weight: normal;
+    line-height: 25px;
+  }
+  img{
+    border-radius: .5rem;
+    width: 500px;
+    height: 500px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .nasa {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 310px;
+      height: 310px;
+    }
+  }
+}

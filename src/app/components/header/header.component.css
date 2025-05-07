@@ -1,4 +1,9 @@
-h1{
-  text-align:center;
-  margin-block:0 1rem;
+header {
+  h2{
+    text-align:center;
+    margin-block: 1rem;
+    font-weight: normal;
+    font-size: 3rem;
+  }
 }
+

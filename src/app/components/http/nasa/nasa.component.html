@@ -1,7 +1,11 @@
 <div *ngIf="loading">Chargement...</div>
 
-<div *ngIf="!loading">
-  <h3>{{ photo.title}}</h3>
-  <img [src]="photo.url" [alt]="photo.title" style="max-width: 100%" />
-  <p>{{ photo.explanation }}</p>
+<div class="container">
+  <div *ngIf="!loading" class="nasa">
+      <img [src]="nasaData.url" [alt]="nasaData.title" />
+    <div>
+    <h3>{{ nasaData.title}}</h3>
+    <p>{{ nasaData.explanation }}</p>
+    </div>
+  </div>
 </div>

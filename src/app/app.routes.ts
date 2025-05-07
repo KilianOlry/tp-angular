@@ -1,7 +1,5 @@
 import { Routes } from '@angular/router';
-import { WebSnapListComponent } from '@/components/web-snap-list/web-snap-list.component';
 import { LandingPageComponent } from '@/components/landing-page/landing-page.component';
-import { WebSnapComponent } from '@/components/web-snap/web-snap.component';
 import { ErrorComponent } from './components/error/error.component';
 
 import { authRoutes } from './routes/auth.routes';
@@ -17,12 +15,6 @@ export const routes: Routes = [
     loadComponent: () => import("@/components/landing-page/landing-page.component").then(m => m.LandingPageComponent)
   },
   {
-    path:"websnaps",
-    title: `Liste des websnap - ${appTitle}`,
-    canActivate: [AuthGuard],
-    loadComponent: () => import("@/components/web-snap-list/web-snap-list.component").then(m => m.WebSnapListComponent)
-  },
-  {
     path:"RicketMorty",
     title: `Rick et Morty - ${appTitle}`,
     canActivate: [AuthGuard],
@@ -33,12 +25,6 @@ export const routes: Routes = [
     title: `Nasa - ${appTitle}`,
     canActivate: [AuthGuard],
     loadComponent: () => import("@/components/http/nasa/nasa.component").then(m => m.NasaComponent)
-  },
-  {
-    path:"websnaps/websnap/:id",
-    title:`WebSnap - ${appTitle}`,
-    canActivate: [AuthGuard],
-    loadComponent: () => import("@/components/web-snap/web-snap.component").then(m => m.WebSnapComponent)
   },
   {
     path: "auth",

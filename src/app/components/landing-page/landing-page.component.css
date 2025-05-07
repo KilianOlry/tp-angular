@@ -1,0 +1,21 @@
+.landing__page{
+.content{
+  display: flex;
+  justify-content: center;
+  margin-block: 7rem;
+  img{
+    width: 450px;
+    height: 450px;
+  }
+}
+}
+
+@media (max-width: 768px) {
+  .content {
+    img{
+      width: 310px;
+      height: 310px;
+    }
+  }
+}
+

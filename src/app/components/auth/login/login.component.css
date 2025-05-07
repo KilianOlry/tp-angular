@@ -1,0 +1,31 @@
+.form__login{
+  display: flex;
+  justify-content: center;
+  article{
+    width: 310px;
+    h2{
+      font-size: 35px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      div{
+        margin-block: 1rem;
+      }
+      input{
+        padding: .5rem;
+        border: 1px solid #ccc;
+        border-radius: .5rem;
+        width: 100%;
+      }
+      button{
+        padding: .5rem;
+        background-color: black;
+        border: none;
+        color: white;
+      }
+    }
+  }
+}

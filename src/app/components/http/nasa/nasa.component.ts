@@ -2,6 +2,17 @@ import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@an
 import {NasaService} from '@/services/http/nasa.service';
 import {CommonModule} from '@angular/common';
 
+export interface NasaDataInterface {
+  date: string;
+  explanation: string;
+  hdurl?: string;
+  media_type: string;
+  service_version: string;
+  title: string;
+  url: string;
+  thumbnail_url: string;
+}
+
 @Component({
   selector: 'app-nasa',
   imports: [CommonModule],
@@ -9,16 +20,17 @@ import {CommonModule} from '@angular/common';
   styleUrl: './nasa.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+
 export class NasaComponent implements OnInit {
-  photo: any;
+  nasaData!: NasaDataInterface;
   loading: boolean = true;
 
   constructor(private nasaService: NasaService, private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.nasaService.getPictureOfTheDay().subscribe({
-      next: (data) => {
-        this.photo = data;
+      next: (data: NasaDataInterface) => {
+        this.nasaData = data;
         this.loading = false;
         this.cdr.detectChanges();
       },

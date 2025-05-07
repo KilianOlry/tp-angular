@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  padding-block: 2rem;
   ul{
     list-style-type: none;
   }
